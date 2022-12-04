@@ -21,43 +21,41 @@ const generateTeam = (team) => {
 
   // create the html for engineers
   const generateEngineer = (engineer) => {
-    //code goes here
     return `
-        <div class="card employee-card">
+    <div class="card employee-card text-white bg-dark ml-3">
         <div class="card-header">
             <h2 class="card-title">${engineer.getName()}</h2>
-            <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+            <h3 class="mr-3">${engineer.getRole()}
+			</h3>
         </div>
-        <div class="card-body">
+        <div class="card-body text-white bg-dark">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${manager.getEmail()}</a></li>
-                <li class="list-group-item">Office number: ${engineer.engineerGitHub()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
             </ul>
         </div>
-    </div>
-        `;
+    </div>`;
   };
 
   // create the html for interns
-  const generateIntern = (intern) => {
-    //code goes here
-    return `
-        <div class="card employee-card">
+    const generateIntern = (intern) => {
+       return `
+    <div class="card employee-card border-danger ml-3">
         <div class="card-header">
-            <h2 class="card-title">${student.getName()}</h2>
-            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
+            <h2 class="card-title text-danger">${intern.getName()}</h2>
+			<h3 class="mr-3 text-danger"></i>${intern.getRole()}
+			</h3>
         </div>
-        <div class="card-body">
+        <div class="card-body border-danger">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${intern.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${manager.getEmail()}</a></li>
-                <li class="list-group-item">Office number: ${intern.getSchool()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                <li class="list-group-item">School: ${intern.getSchool()}</li>
             </ul>
         </div>
-    </div>
-        `;
-  };
+    </div>`;
+     };
 
   const html = [];
 

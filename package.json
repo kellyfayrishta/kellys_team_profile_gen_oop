@@ -4,23 +4,18 @@
   "description": "Challenge 10 module",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js",
+    "reset": "node reset.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kellyfayrishta/kellys_team_profile_gen_oop.git"
-  },
-  "keywords": [],
+
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kellyfayrishta/kellys_team_profile_gen_oop/issues"
-  },
-  "homepage": "https://github.com/kellyfayrishta/kellys_team_profile_gen_oop#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
   },
   "devDependencies": {
     "jest": "^29.3.1"
   }
+
 }
